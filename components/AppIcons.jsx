@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageShader,useComputedValue,useImage } from '@shopify/react-native-skia'
+import { ImageShader,useImage } from '@shopify/react-native-skia'
 import { APP_ICONS } from '../icons';
 
 export default function AppIcons({index,...imageProps}) {

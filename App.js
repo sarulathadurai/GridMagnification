@@ -1,5 +1,5 @@
 import {StyleSheet, View} from 'react-native';
-import {Canvas,Group,useTouchHandler, useValue,runTiming } from '@shopify/react-native-skia';
+import {Canvas,Group,useTouchHandler, useValue,runTiming, useComputedValue } from '@shopify/react-native-skia';
 import React from 'react';
 import RoundedItems from './components/RoundedItems';
 import { 
@@ -53,16 +53,16 @@ export default function App() {
                   height={SQUARE_SIZE}
                   index = {(i+1)*(j+1)}
                 >
-                <AppIcons 
-                index={(i+1)*(j+1)} 
-                fit="cover"
-                rect={{
-                  x:i * SQUARE_CONTAINER_SIZE + PADDING / 2,
-                  y:j * SQUARE_CONTAINER_SIZE + PADDING / 2,
-                  width:SQUARE_SIZE,
-                  height:SQUARE_SIZE
-                }} 
-                />  
+                  <AppIcons 
+                  index={(i+1)*(j+1)} 
+                  fit="cover"
+                  rect={{
+                    x:i * SQUARE_CONTAINER_SIZE + PADDING / 2,
+                    y:j * SQUARE_CONTAINER_SIZE + PADDING / 2,
+                    width:SQUARE_SIZE,
+                    height:SQUARE_SIZE
+                  }} 
+                  />  
                 </RoundedItems>
               );
             });
